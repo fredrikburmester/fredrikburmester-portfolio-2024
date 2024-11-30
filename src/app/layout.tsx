@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import clsx from 'clsx'
+import { Analytics } from '@vercel/analytics/react'
 
 import { Providers } from '@/app/providers'
 
@@ -38,6 +39,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-white dark:bg-gray-950">
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   )
